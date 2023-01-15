@@ -14,6 +14,7 @@ while running:
     background = pygame.image.load("Assets\Images\Scenes\Level 1\main.png")
     screen.blit(background, (0, 0))
     screen.blit(game.player.image, (game.player.rect.x, game.player.rect.y))
+    game.all_guns.draw(screen)
 
     if game.pressed.get(pygame.K_RIGHT) and game.player.rect.x + game.player.rect.width < screen.get_width():
         game.player.move_right()
